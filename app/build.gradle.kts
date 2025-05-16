@@ -66,6 +66,5 @@ dependencies {
 
 // Add a specific SLF4J implementation to resolve the warnings
     implementation ("org.slf4j:slf4j-simple:2.0.7")
-    implementation("androidx.compose.material:material:1.7.4")
 
 }

@@ -2,7 +2,6 @@ package com.diyor.nfccardreading
 
 
 import android.app.AlertDialog
-import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
 import android.nfc.NfcAdapter
 import android.nfc.Tag
