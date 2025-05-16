@@ -1,5 +1,4 @@
-package com.diyor.nfccardreading
-
+package gita.diyor.mobilebanking.ui.activities
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -26,14 +25,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.FragmentActivity
+import com.diyor.nfccardreading.PcscProvider
 import com.github.devnied.emvnfccard.parser.EmvTemplate
 import java.io.IOException
 import java.time.ZoneId
 
+/*
+ * Created by mrgladiator on 9/26/24
+ * Updated with improved error handling and UI feedback
+ */
 class MainActivity : FragmentActivity(), NfcAdapter.ReaderCallback {
     private var mNfcAdapter: NfcAdapter? = null
     private val TAG = "NfcCardReader"
 
+    // States to manage card reading data
     private val cardNumber = mutableStateOf<String?>(null)
     private val expiryDate = mutableStateOf<String?>(null)
     private val statusMessage = mutableStateOf("Please place your card on the back of the device")
